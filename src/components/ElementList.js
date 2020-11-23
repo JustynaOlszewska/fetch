@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonPathBook from "../components/ButtonPathBook.js";
+import BookFormUpdating from "../components/BookFormUpdating.js";
 const ElementList = ({ books, click }) => {
     if (books.length) {
         const newArrayBooks = books.map((book, index) => {
@@ -10,7 +10,7 @@ const ElementList = ({ books, click }) => {
                     <p>{`"${book.title}"`}</p>
                     <h1>Fragment of the book:</h1>
                     <p>{`"${book.body}"`}</p>
-                    <ButtonPathBook click={click} id={index} title={book.title} />
+                    <BookFormUpdating click={click} id={index} title={book.title} />
 
                 </li>
             )
