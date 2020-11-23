@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ElementList from "../components/ElementList";
-import ButtonAddBook from "./ButtonAddBook";
+import BookFormAdding from "../components/BookFormAdding";
 import ButtonDelete from "../components/ButtonDelete";
 import { loginFormValidationRules, loginFormValidationRulesPath } from "../validation/loginFormValidationRules";
 import { apiFetch } from "../fetchApi/fetch";
@@ -11,7 +11,7 @@ const List = () => {
         apiFetch(url[0], setBooks, options("GET"))
     }, []);
 
-    const handleClickPost = (title, fragment) => {
+    const handleAddClick = (title, fragment) => {
         if (title && fragment) {
             apiFetch(url[0], setBooks, options("POST", title, fragment), books)
         }
@@ -36,7 +36,7 @@ const List = () => {
     return (
         <div>
             <ButtonDelete click={handleClickDelete} />
-            <ButtonAddBook click={handleClickPost} />
+            <BookFormAdding handleAddClick={handleAddClick} />
             <ElementList click={handleClickPath} books={books} />
         </div>
     );
