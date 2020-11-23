@@ -15,7 +15,6 @@ const ElementList = ({ books, click }) => {
                 </li>
             )
         })
-
         return (
             <ul>
                 {newArrayBooks}

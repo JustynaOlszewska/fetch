@@ -7,6 +7,5 @@ const ButtonDelete = ({click}) => {
         <hr/>
         </>
      );
-}
- 
+} 
 export default ButtonDelete;

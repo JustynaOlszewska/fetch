@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 const ButtonAddBook = ({ click }) => {
+
 const [title, setTitle] = useState('');
 const [fragment, setFragment] = useState('');
+
     return (
         <form type="submit" onSubmit={(e)=>e.preventDefault()}>
             <label htmlFor="title">Books' title</label>
