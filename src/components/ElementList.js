@@ -1,5 +1,6 @@
 import React from 'react';
 import BookFormUpdating from "../components/BookFormUpdating.js";
+import PropTypes from "prop-types";
 
 const ElementList = ({ books, handleUpdateClick }) => {
 
@@ -26,4 +27,7 @@ const ElementList = ({ books, handleUpdateClick }) => {
     else return null
 };
 
+ElementList.propTypes = {
+    books: PropTypes.array.isRequired,
+};
 export default ElementList;

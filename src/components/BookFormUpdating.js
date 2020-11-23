@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from "prop-types";
 
 const BookFormUpdating = ({ id, handleUpdateClick, title }) => {
 
@@ -20,4 +21,8 @@ const BookFormUpdating = ({ id, handleUpdateClick, title }) => {
     );
 };
 
+BookFormUpdating.propTypes = {
+    title: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+  };
 export default BookFormUpdating;
