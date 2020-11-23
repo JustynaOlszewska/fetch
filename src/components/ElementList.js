@@ -1,6 +1,8 @@
 import React from 'react';
 import BookFormUpdating from "../components/BookFormUpdating.js";
+
 const ElementList = ({ books, handleUpdateClick }) => {
+
     if (books.length) {
         const newArrayBooks = books.map((book, index) => {
             return (
@@ -14,7 +16,7 @@ const ElementList = ({ books, handleUpdateClick }) => {
 
                 </li>
             )
-        })
+        });
         return (
             <ul>
                 {newArrayBooks}
@@ -22,6 +24,6 @@ const ElementList = ({ books, handleUpdateClick }) => {
         );
     }
     else return null
-}
+};
 
 export default ElementList;

@@ -1,11 +1,12 @@
-import List from "../src/components/List"
+import List from "../src/components/List";
+
 function App() {
   return (
     <div className="App">
-      <h1>The best books of all time</h1> 
-      <List/>
+      <h1>The best books of all time</h1>
+      <List />
     </div>
   );
-}
+};
 
 export default App;

@@ -42,6 +42,6 @@ export const options = (option, title, fragment, changedText) => {
             )
         default:
             console.log("unexpected option")
-    }
+    };
 
-}
+};

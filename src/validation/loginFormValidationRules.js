@@ -4,7 +4,7 @@ export const loginFormValidationRules = (title, fragment) => {
         errors.title = "this inputs are required"
     }
     return errors
-}
+};
 
 export const loginFormValidationRulesPath = (text) => {
     let errors = []
@@ -12,4 +12,4 @@ export const loginFormValidationRulesPath = (text) => {
         errors.text = "this text is required"
     }
     return errors
-}
+};
