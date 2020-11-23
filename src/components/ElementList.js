@@ -10,7 +10,7 @@ const ElementList = ({ books, click }) => {
                     <p>{`"${book.title}"`}</p>
                     <h1>Fragment of the book:</h1>
                     <p>{`"${book.body}"`}</p>
-                    <ButtonPathBook click={click} id={index} books={books} />
+                    <ButtonPathBook click={click} id={index} title={book.title} />
 
                 </li>
             )

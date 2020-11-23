@@ -20,9 +20,9 @@ const List = () => {
             return alert(`${message.title}`)
         }
     }
-    const handleClickPath = (changedText, id) => {
+    const handleClickPath = (changedText, id, title) => {
         if (changedText) {
-            apiFetch(url[1], setBooks, options("PATCH", null, null, changedText), books, id)
+            apiFetch(url[1], setBooks, options("PATCH", title, null, changedText), books, id)
         }
         else {
             const message = loginFormValidationRulesPath(changedText)
