@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ButtonDelete = ({click}) => {
+const ButtonDelete = ({handleDeleteClick}) => {
     return ( 
         <>
-        <button onClick={click}>delete everything and write your own list</button>
+        <button onClick={handleDeleteClick}>delete everything and write your own list</button>
         <hr/>
         </>
      );

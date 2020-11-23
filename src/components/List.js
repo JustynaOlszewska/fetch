@@ -20,7 +20,7 @@ const List = () => {
             return alert(`${message.title}`)
         }
     }
-    const handleClickPath = (changedText, id, title) => {
+    const handleUpdateClick = (changedText, id, title) => {
         if (changedText) {
             apiFetch(url[1], setBooks, options("PATCH", title, null, changedText), books, id)
         }
@@ -29,15 +29,15 @@ const List = () => {
             return alert(message.text)
         }
     }
-    const handleClickDelete = () => {
+    const handleDeleteClick = () => {
         apiFetch(url[1], setBooks, options("DELETE"))
     }
 
     return (
         <div>
-            <ButtonDelete click={handleClickDelete} />
+            <ButtonDelete handleDeleteClick={handleDeleteClick} />
             <BookFormAdding handleAddClick={handleAddClick} />
-            <ElementList click={handleClickPath} books={books} />
+            <ElementList handleUpdateClick={handleUpdateClick} books={books} />
         </div>
     );
 }

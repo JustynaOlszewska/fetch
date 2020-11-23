@@ -1,6 +1,6 @@
 import React from 'react';
 import BookFormUpdating from "../components/BookFormUpdating.js";
-const ElementList = ({ books, click }) => {
+const ElementList = ({ books, handleUpdateClick }) => {
     if (books.length) {
         const newArrayBooks = books.map((book, index) => {
             return (
@@ -10,7 +10,7 @@ const ElementList = ({ books, click }) => {
                     <p>{`"${book.title}"`}</p>
                     <h1>Fragment of the book:</h1>
                     <p>{`"${book.body}"`}</p>
-                    <BookFormUpdating click={click} id={index} title={book.title} />
+                    <BookFormUpdating handleUpdateClick={handleUpdateClick} id={index} title={book.title} />
 
                 </li>
             )
