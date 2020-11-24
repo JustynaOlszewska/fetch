@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ElementList from "../components/ElementList";
 import BookFormAdding from "../components/BookFormAdding";
 import ButtonDelete from "../components/ButtonDelete";
-import { loginFormValidationRules, loginFormValidationRulesPath } from "../validation/loginFormValidationRules";
+import { loginFormValidationRulesPath } from "../validation/loginFormValidationRules";
 import { apiFetch } from "../fetchApi/fetch";
 import { url, options } from "../fetchApi/utilities";
 
@@ -13,16 +13,6 @@ const List = () => {
     useEffect(() => {
         apiFetch(users, setBooks, options("GET"))
     }, [users]);
-
-    const handleAddClick = (title, fragment) => {
-        if (title && fragment) {
-            apiFetch(users, setBooks, options("POST", title, fragment), books)
-        }
-        else {
-            const message = loginFormValidationRules(title, fragment)
-            return alert(`${message.title}`)
-        }
-    };
 
     const handleUpdateClick = (changedText, id, title) => {
         if (changedText) {
@@ -41,7 +31,7 @@ const List = () => {
     return (
         <div>
             <ButtonDelete handleDeleteClick={handleDeleteClick} />
-            <BookFormAdding handleAddClick={handleAddClick} />
+            <BookFormAdding books={books} setBooks={setBooks} />
             <ElementList handleUpdateClick={handleUpdateClick} books={books} />
         </div>
     );
