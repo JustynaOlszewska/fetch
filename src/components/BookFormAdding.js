@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { url, options } from "../fetchApi/utilities";
 import { loginFormValidationRules } from "../validation/loginFormValidationRules";
 import { apiFetch } from "../fetchApi/fetch";
+import PropTypes from "prop-types";
 
 const BookFormAdding = ({ books, setBooks }) => {
 
@@ -40,4 +41,8 @@ const BookFormAdding = ({ books, setBooks }) => {
     );
 };
 
+BookFormAdding.propTypes = {
+    books: PropTypes.array.isRequired,
+    setBooks: PropTypes.array.isRequired
+}
 export default BookFormAdding;
