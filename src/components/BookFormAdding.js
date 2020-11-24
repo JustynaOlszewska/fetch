@@ -13,13 +13,13 @@ const BookFormAdding = ({ books, setBooks }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        if (title && fragment) {
-            apiFetch(users, setBooks, options("POST", title, fragment), books)
-        }
-        else {
+        if (!title && !fragment) {
             const message = loginFormValidationRules(title, fragment)
             return alert(`${message.title}`)
-        }
+        };
+
+        apiFetch(users, setBooks, options("POST", title, fragment), books)
+
     };
 
     const handleChangeTitle = (event) => {
@@ -43,6 +43,5 @@ const BookFormAdding = ({ books, setBooks }) => {
 
 BookFormAdding.propTypes = {
     books: PropTypes.array.isRequired,
-    setBooks: PropTypes.array.isRequired
-}
+};
 export default BookFormAdding;

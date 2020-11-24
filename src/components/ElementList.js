@@ -2,7 +2,7 @@ import React from 'react';
 import BookFormUpdating from "../components/BookFormUpdating.js";
 import PropTypes from "prop-types";
 
-const ElementList = ({ books, handleUpdateClick }) => {
+const ElementList = ({ books, setBooks }) => {
 
     if (books.length) {
         const newArrayBooks = books.map((book, index) => {
@@ -13,7 +13,7 @@ const ElementList = ({ books, handleUpdateClick }) => {
                     <p>{`"${book.title}"`}</p>
                     <h1>Fragment of the book:</h1>
                     <p>{`"${book.body}"`}</p>
-                    <BookFormUpdating handleUpdateClick={handleUpdateClick} id={index} title={book.title} />
+                    <BookFormUpdating id={index} books={books} setBooks={setBooks} title={book.title} />
 
                 </li>
             )
