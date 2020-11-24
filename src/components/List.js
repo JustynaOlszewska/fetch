@@ -9,14 +9,14 @@ import { url, options } from "../fetchApi/utilities";
 const List = () => {
 
     const [books, setBooks] = useState([]);
-
+    const [users, posts] = url;
     useEffect(() => {
-        apiFetch(url[0], setBooks, options("GET"))
-    }, []);
+        apiFetch(users, setBooks, options("GET"))
+    }, [users]);
 
     const handleAddClick = (title, fragment) => {
         if (title && fragment) {
-            apiFetch(url[0], setBooks, options("POST", title, fragment), books)
+            apiFetch(users, setBooks, options("POST", title, fragment), books)
         }
         else {
             const message = loginFormValidationRules(title, fragment)
@@ -26,7 +26,7 @@ const List = () => {
 
     const handleUpdateClick = (changedText, id, title) => {
         if (changedText) {
-            apiFetch(url[1], setBooks, options("PATCH", title, null, changedText), books, id)
+            apiFetch(posts, setBooks, options("PATCH", title, null, changedText), books, id)
         }
         else {
             const message = loginFormValidationRulesPath(changedText)
@@ -35,7 +35,7 @@ const List = () => {
     };
 
     const handleDeleteClick = () => {
-        apiFetch(url[1], setBooks, options("DELETE"))
+        apiFetch(posts, setBooks, options("DELETE"))
     };
 
     return (
