@@ -1,12 +1,12 @@
 import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { Switch, Route } from "react-router-dom";
-import ButtonDelete from "../components/ButtonDelete";
 import { apiFetch } from "../fetchApi/fetch";
 import { url, options } from "../fetchApi/utilities";
 
 const ElementList = lazy(() => import("../components/ElementList"));
 const BookFormAdding = lazy(() => import("../components/BookFormAdding"));
-
+const ButtonDelete = lazy(() => import("../components/ButtonDelete"));
+//ButtonDelete lazy nie działa
 const List = () => {
 
     const [books, setBooks] = useState([]);
