@@ -31,17 +31,20 @@ const BookFormAdding = ({ books, setBooks }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="title">Books' title</label>
-            <input value={title} id="title" type="text" onChange={handleChangeTitle} />
-            <label htmlFor="fragment">Fragment of the book</label>
-            <input value={fragment} id="fragment" type="text" onChange={handleChangeFragment} />
-            <button>adding a book to the list</button>
-        </form>
+        <>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="title">Books' title</label>
+                <input value={title} id="title" type="text" onChange={handleChangeTitle} />
+                <label htmlFor="fragment">Fragment of the book</label>
+                <input value={fragment} id="fragment" type="text" onChange={handleChangeFragment} />
+                <button>adding a book to the list</button>
+            </form>
+        </>
     );
 };
 
 BookFormAdding.propTypes = {
     books: PropTypes.array.isRequired,
 };
+
 export default BookFormAdding;
