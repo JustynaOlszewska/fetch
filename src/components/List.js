@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { Switch, Route } from "react-router-dom";
 import ElementList from "../components/ElementList";
 import BookFormAdding from "../components/BookFormAdding";
 import ButtonDelete from "../components/ButtonDelete";
 import { apiFetch } from "../fetchApi/fetch";
 import { url, options } from "../fetchApi/utilities";
-import {
-    Switch,
-    Route,
-} from "react-router-dom";
+
 const List = () => {
 
     const [books, setBooks] = useState([]);
@@ -17,7 +15,6 @@ const List = () => {
         apiFetch(users, setBooks, options("GET"))
     }, [users]);
 
-
     return (
         <div>
             <ButtonDelete setBooks={setBooks} />
@@ -26,7 +23,7 @@ const List = () => {
                     <ElementList setBooks={setBooks} books={books} />
                 </Route>
                 <Route path="/addBook">
-                    <BookFormAdding books={books} setBooks={setBooks} />
+                    <BookFormAdding setBooks={setBooks} books={books} />
                 </Route>
             </Switch>
         </div>
