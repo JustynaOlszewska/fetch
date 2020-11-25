@@ -16,7 +16,7 @@ export const options = (option, title, fragment, changedText) => {
                 body: JSON.stringify(
                     {
                         title: title,
-                        body: fragment
+                        body: fragment,
                     }
                 ),
                 headers: {
@@ -28,7 +28,7 @@ export const options = (option, title, fragment, changedText) => {
                 method: 'PATCH',
                 body: JSON.stringify({
                     body: changedText,
-                    title: title
+                    title: title,
                 }),
                 headers: {
                     'Content-type': 'application/json; charset=UTF-8',

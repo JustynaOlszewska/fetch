@@ -1,33 +1,28 @@
 import React from 'react';
-import BookFormUpdating from "../components/BookFormUpdating.js";
 import PropTypes from "prop-types";
+import BookFormUpdating from "../components/BookFormUpdating.js";
 
 const ElementList = ({ books, setBooks }) => {
 
-    if (books.length) {
-        const newArrayBooks = books.map((book, index) => {
-            return (
-                <li key={index}>
-                    <hr />
-                    <h1>book's title:</h1>
-                    <p>{`"${book.title}"`}</p>
-                    <h1>Fragment of the book:</h1>
-                    <p>{`"${book.body}"`}</p>
-                    <BookFormUpdating id={index} books={books} setBooks={setBooks} title={book.title} />
+    return (
+        books?.length ? (
+            books.map(book => {
+                return (
+                    <li key={book.id}>
+                        <hr />
+                        <h1>book's title:</h1>
+                        <p>{`"${book.title}"`}</p>
+                        <h2>Fragment of the book:</h2>
+                        <p>{`"${book.body}"`}</p>
+                        <BookFormUpdating id={book.id} books={books} setBooks={setBooks} title={book.title} />
+                    </li>
+                )
+            })) : null)
 
-                </li>
-            )
-        });
-        return (
-            <ul>
-                {newArrayBooks}
-            </ul>
-        );
-    }
-    else return null
 };
 
 ElementList.propTypes = {
     books: PropTypes.array.isRequired,
 };
+
 export default ElementList;

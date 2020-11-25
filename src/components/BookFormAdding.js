@@ -12,7 +12,11 @@ const BookFormAdding = ({ books, setBooks }) => {
     const [users] = url;
 
     const handleSubmit = (event) => {
+
         event.preventDefault()
+
+       books.map(item => item.id += 1)
+      
         if (!title && !fragment) {
             const message = loginFormValidationRules(title, fragment)
             return alert(`${message.title}`)

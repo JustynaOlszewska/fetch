@@ -6,7 +6,7 @@ import { url, options } from "../fetchApi/utilities";
 const ElementList = lazy(() => import("../components/ElementList"));
 const BookFormAdding = lazy(() => import("../components/BookFormAdding"));
 const ButtonDelete = lazy(() => import("../components/ButtonDelete"));
-//ButtonDelete lazy nie działa
+
 const List = () => {
 
     const [books, setBooks] = useState([]);

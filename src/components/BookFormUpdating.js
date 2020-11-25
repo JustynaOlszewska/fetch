@@ -5,7 +5,7 @@ import { apiFetch } from "../fetchApi/fetch";
 import { url, options } from "../fetchApi/utilities";
 
 const BookFormUpdating = ({ id, title, setBooks, books }) => {
-
+    
     const [changedText, setChangeText] = useState();
 
     const [, posts] = url;
@@ -27,7 +27,7 @@ const BookFormUpdating = ({ id, title, setBooks, books }) => {
     return (
         <form value={changedText} onSubmit={handleSubmit}>
             <input onChange={handleChangeText} type="text" />
-            <button>replacing fragment of book to another fragment</button>
+            <button >replacing fragment of book to another fragment</button>
         </form>
     );
 };
