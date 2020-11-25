@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/fetch/static/css/main.6fa3ea25.chunk.css",
-    "main.js": "/fetch/static/js/main.4d79460c.chunk.js",
-    "main.js.map": "/fetch/static/js/main.4d79460c.chunk.js.map",
-    "runtime-main.js": "/fetch/static/js/runtime-main.8a2b3acf.js",
-    "runtime-main.js.map": "/fetch/static/js/runtime-main.8a2b3acf.js.map",
+    "main.js": "/fetch/static/js/main.5fdaf4c1.chunk.js",
+    "main.js.map": "/fetch/static/js/main.5fdaf4c1.chunk.js.map",
+    "runtime-main.js": "/fetch/static/js/runtime-main.95a75756.js",
+    "runtime-main.js.map": "/fetch/static/js/runtime-main.95a75756.js.map",
     "static/css/2.70c372c2.chunk.css": "/fetch/static/css/2.70c372c2.chunk.css",
     "static/js/2.c0479e87.chunk.js": "/fetch/static/js/2.c0479e87.chunk.js",
     "static/js/2.c0479e87.chunk.js.map": "/fetch/static/js/2.c0479e87.chunk.js.map",
-    "static/js/3.b1ed37a2.chunk.js": "/fetch/static/js/3.b1ed37a2.chunk.js",
-    "static/js/3.b1ed37a2.chunk.js.map": "/fetch/static/js/3.b1ed37a2.chunk.js.map",
-    "static/js/4.0b702c78.chunk.js": "/fetch/static/js/4.0b702c78.chunk.js",
-    "static/js/4.0b702c78.chunk.js.map": "/fetch/static/js/4.0b702c78.chunk.js.map",
-    "static/js/5.bf891789.chunk.js": "/fetch/static/js/5.bf891789.chunk.js",
-    "static/js/5.bf891789.chunk.js.map": "/fetch/static/js/5.bf891789.chunk.js.map",
+    "static/js/3.2bb47cea.chunk.js": "/fetch/static/js/3.2bb47cea.chunk.js",
+    "static/js/3.2bb47cea.chunk.js.map": "/fetch/static/js/3.2bb47cea.chunk.js.map",
+    "static/js/4.0c7887ff.chunk.js": "/fetch/static/js/4.0c7887ff.chunk.js",
+    "static/js/4.0c7887ff.chunk.js.map": "/fetch/static/js/4.0c7887ff.chunk.js.map",
+    "static/js/5.63c99995.chunk.js": "/fetch/static/js/5.63c99995.chunk.js",
+    "static/js/5.63c99995.chunk.js.map": "/fetch/static/js/5.63c99995.chunk.js.map",
     "static/js/6.412672fc.chunk.js": "/fetch/static/js/6.412672fc.chunk.js",
     "static/js/6.412672fc.chunk.js.map": "/fetch/static/js/6.412672fc.chunk.js.map",
     "index.html": "/fetch/index.html",
@@ -22,10 +22,10 @@
     "static/js/2.c0479e87.chunk.js.LICENSE.txt": "/fetch/static/js/2.c0479e87.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.8a2b3acf.js",
+    "static/js/runtime-main.95a75756.js",
     "static/css/2.70c372c2.chunk.css",
     "static/js/2.c0479e87.chunk.js",
     "static/css/main.6fa3ea25.chunk.css",
-    "static/js/main.4d79460c.chunk.js"
+    "static/js/main.5fdaf4c1.chunk.js"
   ]
 }
