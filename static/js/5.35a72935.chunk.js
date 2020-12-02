@@ -1,0 +1,2 @@
+(this.webpackJsonplisfetch=this.webpackJsonplisfetch||[]).push([[5],{37:function(e,t,n){"use strict";n.r(t);var c=n(1),s=n(0),i=n.n(s),r=n(17),l=i.a.memo((function(){var e=Object(s.useContext)(r.a);return Object(c.jsxs)(c.Fragment,{children:[Object(c.jsx)("button",{onClick:e.handleDeleteClick,children:"delete everything and write your own list"}),Object(c.jsx)("hr",{})]})}));t.default=l}}]);
+//# sourceMappingURL=5.35a72935.chunk.js.map

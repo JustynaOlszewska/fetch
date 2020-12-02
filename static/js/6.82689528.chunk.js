@@ -1,2 +1,0 @@
-(this.webpackJsonplisfetch=this.webpackJsonplisfetch||[]).push([[6],{35:function(t,e,s){"use strict";s.r(e);var c=s(1),i=(s(0),s(14));e.default=function(){return Object(c.jsxs)("ul",{children:[Object(c.jsx)("li",{children:Object(c.jsx)(i.b,{to:"/",children:"Home"})}),Object(c.jsx)("li",{children:Object(c.jsx)(i.b,{to:"/listBooks",children:"A list of books"})}),Object(c.jsx)("li",{children:Object(c.jsx)(i.b,{to:"/addBook",children:"Addng a book to the list"})})]})}}}]);
-//# sourceMappingURL=6.82689528.chunk.js.map

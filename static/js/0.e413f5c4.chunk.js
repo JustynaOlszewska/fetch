@@ -1,0 +1,2 @@
+(this.webpackJsonplisfetch=this.webpackJsonplisfetch||[]).push([[0],{38:function(t,i,n){"use strict";n.r(i),n.d(i,"loginFormValidationRules",(function(){return r})),n.d(i,"loginFormValidationRulesPatch",(function(){return e}));var r=function(t,i){var n=[];return t&&i||(n.title="this inputs are required"),n},e=function(t){var i=[];return t||(i.text="this text is required"),i}}}]);
+//# sourceMappingURL=0.e413f5c4.chunk.js.map
