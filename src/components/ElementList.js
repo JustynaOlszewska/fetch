@@ -4,7 +4,7 @@ import BookFormUpdating from "../components/BookFormUpdating.js";
 
 import BooksContext from "../context/booksList/bookContext";
 
-const ElementList = () => {
+const ElementList = React.memo(() => {
 
     const booksContext = useContext(BooksContext);
 
@@ -24,6 +24,6 @@ const ElementList = () => {
                     )
                 })} </ul>)
             : null)
-};
+});
 
 export default ElementList;

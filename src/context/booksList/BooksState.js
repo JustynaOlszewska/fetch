@@ -5,7 +5,6 @@ import { GET_BOOKS, POST_BOOKS, PATCH_BOOKS, DELETE_BOOKS, CHANGE_TITLE, CHANGE_
 import BookReducer from "../booksList/bookReducer";
 import BookContext from "../booksList/bookContext";
 
-import { loginFormValidationRules, loginFormValidationRulesPatch } from "../../validation/loginFormValidationRules";
 import { options } from "../../fetchApi/utilities";
 
 const BookState = props => {
@@ -72,7 +71,9 @@ const BookState = props => {
         state.books.map(item => item.id += 1);
 
         if (!state.title && !state.fragment) {
-            const message = loginFormValidationRules(state.title, state.fragment);
+            const message = import("../../validation/loginFormValidationRules").then(valid => {
+                return console.log(valid.loginFormValidationRules(state.title, state.fragmen));
+            });
             return alert(`${message.title}`);
         };
 
@@ -94,7 +95,10 @@ const BookState = props => {
         e.preventDefault();
 
         if (state.changedText === null) {
-            const message = loginFormValidationRulesPatch(state.changedText);
+            
+            const message = import("../../validation/loginFormValidationRules").then(valid => {
+                return console.log(valid.loginFormValidationRulesPatch(state.title, state.fragmen));
+            });
             return alert(message.text);
         };
 
