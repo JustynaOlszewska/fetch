@@ -1,2 +1,0 @@
-(this.webpackJsonplisfetch=this.webpackJsonplisfetch||[]).push([[6],{34:function(t,e,n){"use strict";n.r(e);var c=n(31),s=n(1),i=n(0),r=n.n(i),o=n(30),a=n(29),b=r.a.memo((function(t){var e=t.setBooks,n=Object(c.a)(o.b,2)[1];return Object(s.jsxs)(s.Fragment,{children:[Object(s.jsx)("button",{onClick:function(){Object(a.a)(n,e,Object(o.a)("DELETE"))},children:"delete everything and write your own list"}),Object(s.jsx)("hr",{})]})}));e.default=b}}]);
-//# sourceMappingURL=6.412672fc.chunk.js.map
