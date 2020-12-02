@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import { useRouteMatch } from "react-router-dom";
 import { url, options } from "../fetchApi/utilities";
 import { loginFormValidationRules } from "../validation/loginFormValidationRules";
 import { apiFetch } from "../fetchApi/fetch";
 import PropTypes from "prop-types";
 
 const BookFormAdding = ({ books, setBooks }) => {
-
+    let match = useRouteMatch();
+    console.log('s', match)
     const [title, setTitle] = useState('');
     const [fragment, setFragment] = useState('');
 
@@ -15,8 +17,8 @@ const BookFormAdding = ({ books, setBooks }) => {
 
         event.preventDefault()
 
-       books.map(item => item.id += 1)
-      
+        books.map(item => item.id += 1)
+
         if (!title && !fragment) {
             const message = loginFormValidationRules(title, fragment)
             return alert(`${message.title}`)
@@ -36,6 +38,7 @@ const BookFormAdding = ({ books, setBooks }) => {
 
     return (
         <>
+        
             <form onSubmit={handleSubmit}>
                 <label htmlFor="title">Books' title</label>
                 <input value={title} id="title" type="text" onChange={handleChangeTitle} />

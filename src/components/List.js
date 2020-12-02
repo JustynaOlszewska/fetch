@@ -1,35 +1,27 @@
-import React, { useEffect, useState, lazy, Suspense } from 'react';
-import { Switch, Route } from "react-router-dom";
-import { apiFetch } from "../fetchApi/fetch";
-import { url, options } from "../fetchApi/utilities";
+import React from 'react';
+// import { Switch, Route } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
+// import { BrowserRouter as Router } from "react-router-dom";
 
-const ElementList = lazy(() => import("../components/ElementList"));
-const BookFormAdding = lazy(() => import("../components/BookFormAdding"));
-const ButtonDelete = lazy(() => import("../components/ButtonDelete"));
+// import ElementList from "../components/ElementList";
+// import BookFormAdding from "../components/BookFormAdding";
 
-const List = () => {
+// const ElementList = lazy(() => import("../components/ElementList"));
+// const BookFormAdding = lazy(() => import("../components/BookFormAdding"));
+// const ButtonDelete = lazy(() => import("../components/ButtonDelete"));
 
-    const [books, setBooks] = useState([]);
-    const [users,] = url;
+const List = ({ setBooks }) => {
 
-    useEffect(() => {
-        apiFetch(users, setBooks, options("GET"))
-    }, [users]);
+
 
     return (
         <div>
-            <Suspense fallback={<div>Loading...</div>}>
-                <ButtonDelete setBooks={setBooks} />
-                <Switch>
-                    <Route path="/listBooks">
-                        <ElementList setBooks={setBooks} books={books} />
-                    </Route>
-                    <Route path="/addBook">
-                        <BookFormAdding setBooks={setBooks} books={books} />
-                    </Route>
-                </Switch>
-            </Suspense>
+            {/* <Suspense fallback={<div>Loading...</div>}> */}
+
+            {/* </Suspense> */}
         </div>
+
+
     );
 };
 

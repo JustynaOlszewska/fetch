@@ -5,7 +5,7 @@ const Navigation = () => {
     return (
         <ul>
             <li>
-                <NavLink exact to="/">Home</NavLink>
+                <NavLink to="/">Home</NavLink>
             </li>
             <li>
                 <NavLink to="/listBooks">A list of books</NavLink>
@@ -16,6 +16,6 @@ const Navigation = () => {
         </ul>
 
     );
-}
+};
 
 export default Navigation;
