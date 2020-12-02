@@ -1,7 +1,6 @@
-
-
 export const options = (option, title, fragment, changedText) => {
     switch (option) {
+
         case "GET":
             return ({
                 method: 'GET',
@@ -10,6 +9,7 @@ export const options = (option, title, fragment, changedText) => {
                     'Content-type': 'application/json; charset=UTF-8',
                 },
             });
+
         case "POST":
             return {
                 method: 'POST',
@@ -23,6 +23,7 @@ export const options = (option, title, fragment, changedText) => {
                     'Content-type': 'application/json; charset=UTF-8',
                 },
             };
+
         case "PATCH":
             return {
                 method: 'PATCH',
@@ -33,15 +34,12 @@ export const options = (option, title, fragment, changedText) => {
                 headers: {
                     'Content-type': 'application/json; charset=UTF-8',
                 },
-            }
+            };
+
         case "DELETE":
-            return (
-                {
-                    method: 'DELETE',
-                }
-            )
+            return { method: 'DELETE' };
+
         default:
             console.log("unexpected option")
     };
-
 };

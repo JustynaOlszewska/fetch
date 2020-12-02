@@ -1,37 +1,22 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from "prop-types";
-import { loginFormValidationRulesPath } from "../validation/loginFormValidationRules";
-import { apiFetch } from "../fetchApi/fetch";
-import { options } from "../fetchApi/utilities";
 
-const BookFormUpdating = ({ id, title, setBooks, books }) => {
+import BooksContext from "../context/booksList/bookContext";
 
-    const [changedText, setChangeText] = useState();
+const BookFormUpdating = ({ id }) => {
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        if (!changedText) {
-            const message = loginFormValidationRulesPath(changedText)
-            return alert(message.text)
-        }
-
-        apiFetch(setBooks, options("PATCH", title, null, changedText), books, id)
-    };
-
-    const handleChangeText = (e) => {
-        setChangeText(e.target.value)
-    };
+    const booksContext = useContext(BooksContext);
 
     return (
-        <form value={changedText} onSubmit={handleSubmit}>
-            <input onChange={handleChangeText} type="text" />
+        <form value={booksContext.changedText} onSubmit={(e) => booksContext.handleSubmitUpdating(id, e)}>
+            <input onChange={booksContext.handleChangeText} type="text" />
             <button >replacing fragment of book to another fragment</button>
-        </form>
+        </form >
     );
 };
 
 BookFormUpdating.propTypes = {
-    title: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
 };
+
 export default BookFormUpdating;

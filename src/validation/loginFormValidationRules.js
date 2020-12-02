@@ -6,7 +6,7 @@ export const loginFormValidationRules = (title, fragment) => {
     return errors
 };
 
-export const loginFormValidationRulesPath = (text) => {
+export const loginFormValidationRulesPatch = (text) => {
     let errors = []
     if (!text) {
         errors.text = "this text is required"

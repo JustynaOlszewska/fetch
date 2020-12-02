@@ -1,26 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
-
-import { options } from "./fetchApi/utilities";
-import { apiFetch } from "./fetchApi/fetch";
 
 import Content from "./layout/Content";
 
+import BooksState from "./context/booksList/BooksState";
+
 function App() {
 
-  const [books, setBooks] = useState([]);
-
-  useEffect(() => {
-    apiFetch(setBooks, options("GET"))
-  }, []);
-
   return (
-    <Router>
-      <div className="App">
-        <h1>The best books of all time</h1>
-        <Content books={books} setBooks={setBooks} />
-      </div>
-    </Router>
+    <BooksState>
+        <Router>
+          <div className="App">
+            <h1>The best books of all time</h1>
+            <Content />
+          </div>
+        </Router>
+    </BooksState>
   );
 };
 

@@ -1,16 +1,14 @@
-import React from 'react';
-import { options } from "../fetchApi/utilities";
-import { apiFetch } from "../fetchApi/fetch";
+import React, { useContext } from 'react';
 
-const ButtonDelete = React.memo(({ setBooks }) => {
+import BookContext from "../context/booksList/bookContext";
 
-    const handleDeleteClick = () => {
-        apiFetch(setBooks, options("DELETE"))
-    };
+const ButtonDelete = React.memo(() => {
+
+    const bookContext = useContext(BookContext)
 
     return (
         <>
-            <button onClick={handleDeleteClick}>delete everything and write your own list</button>
+            <button onClick={bookContext.handleDeleteClick}>delete everything and write your own list</button>
             <hr />
         </>
     );

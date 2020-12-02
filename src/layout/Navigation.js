@@ -14,7 +14,6 @@ const Navigation = () => {
                 <NavLink to="/addBook">Addng a book to the list</NavLink>
             </li>
         </ul>
-
     );
 };
 
