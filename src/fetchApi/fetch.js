@@ -1,5 +1,8 @@
+export const apiFetch = (setBooks, options, books, id) => {
 
-export const apiFetch = (url, setBooks, options, books, id) => {
+    const users = ((options.method === "PATCH") || (options.method === "DELETE")) ? "/1?userId=1" : "?userId=1"
+
+    const url = `https://jsonplaceholder.typicode.com/posts${users}`
 
     fetch(url, options)
         .then(response => {

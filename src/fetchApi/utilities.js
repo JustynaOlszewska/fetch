@@ -1,4 +1,4 @@
-export const url = ['https://jsonplaceholder.typicode.com/posts?userId=1', 'https://jsonplaceholder.typicode.com/posts/1?userId=1'];
+
 
 export const options = (option, title, fragment, changedText) => {
     switch (option) {

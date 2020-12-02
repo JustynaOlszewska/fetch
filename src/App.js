@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
 
-import { url, options } from "./fetchApi/utilities";
+import { options } from "./fetchApi/utilities";
 import { apiFetch } from "./fetchApi/fetch";
 
 import Content from "./layout/Content";
@@ -9,11 +9,10 @@ import Content from "./layout/Content";
 function App() {
 
   const [books, setBooks] = useState([]);
-  const [users,] = url;
 
   useEffect(() => {
-    apiFetch(users, setBooks, options("GET"))
-  }, [users]);
+    apiFetch(setBooks, options("GET"))
+  }, []);
 
   return (
     <Router>

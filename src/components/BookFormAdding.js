@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useRouteMatch } from "react-router-dom";
-import { url, options } from "../fetchApi/utilities";
+import { options } from "../fetchApi/utilities";
 import { loginFormValidationRules } from "../validation/loginFormValidationRules";
 import { apiFetch } from "../fetchApi/fetch";
 import PropTypes from "prop-types";
@@ -10,8 +10,6 @@ const BookFormAdding = ({ books, setBooks }) => {
     console.log('s', match)
     const [title, setTitle] = useState('');
     const [fragment, setFragment] = useState('');
-
-    const [users] = url;
 
     const handleSubmit = (event) => {
 
@@ -24,7 +22,7 @@ const BookFormAdding = ({ books, setBooks }) => {
             return alert(`${message.title}`)
         };
 
-        apiFetch(users, setBooks, options("POST", title, fragment), books)
+        apiFetch(setBooks, options("POST", title, fragment), books)
 
     };
 
@@ -38,7 +36,7 @@ const BookFormAdding = ({ books, setBooks }) => {
 
     return (
         <>
-        
+
             <form onSubmit={handleSubmit}>
                 <label htmlFor="title">Books' title</label>
                 <input value={title} id="title" type="text" onChange={handleChangeTitle} />

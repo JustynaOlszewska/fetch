@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import PropTypes from "prop-types";
 import { loginFormValidationRulesPath } from "../validation/loginFormValidationRules";
 import { apiFetch } from "../fetchApi/fetch";
-import { url, options } from "../fetchApi/utilities";
+import { options } from "../fetchApi/utilities";
 
 const BookFormUpdating = ({ id, title, setBooks, books }) => {
-    
-    const [changedText, setChangeText] = useState();
 
-    const [, posts] = url;
+    const [changedText, setChangeText] = useState();
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -17,7 +15,7 @@ const BookFormUpdating = ({ id, title, setBooks, books }) => {
             return alert(message.text)
         }
 
-        apiFetch(posts, setBooks, options("PATCH", title, null, changedText), books, id)
+        apiFetch(setBooks, options("PATCH", title, null, changedText), books, id)
     };
 
     const handleChangeText = (e) => {
